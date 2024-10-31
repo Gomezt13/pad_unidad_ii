@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "EFICIENCIA DE USO DE AGUA EN QUINCE GENOTIPOS DE PAPA (Solanum tuberosum L.) BAJO CONDICIONES DE ESTRÉS HÍDRICO POR SEQUÍA"
 about:
   id: me
   template: broadside
