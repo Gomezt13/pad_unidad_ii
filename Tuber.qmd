@@ -1,0 +1,9 @@
+---
+title: "Tuber Dry Weight"
+---
+
+# Importar datos
+
+# Análisis de la Varianza (ANOVA)
+
+## Project 3
