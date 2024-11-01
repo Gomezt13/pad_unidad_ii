@@ -46,6 +46,7 @@ fb %>%
 ```
 
 ## Análisis de Componentes Principales (PCA)
+
 ```{r}
 # Cargar librerías necesarias
 library(dplyr)
