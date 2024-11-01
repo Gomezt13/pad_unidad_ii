@@ -8,6 +8,7 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - informe.qmd
       - Biomass.qmd
       - Tuber.qmd
       - multi.qmd

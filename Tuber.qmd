@@ -46,7 +46,7 @@ anova(model)
 
 plot(model)
 
-ol <- boxplot(lfa ~  riego*geno , fb)
+ol <- boxplot(tubdw ~  riego*geno , fb)
 
 ol
 
