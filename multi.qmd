@@ -1,0 +1,67 @@
+---
+title: " Analisis multivariado"
+---
+
+# Importación de datos
+```{r}
+source('https://inkaverse.com/setup.r')
+
+library(inti)
+library(googlesheets4)
+library(ggplot2)
+
+url <- "https://docs.google.com/spreadsheets/d/15r7ZwcZZHbEgltlF6gSFvCTFA-CFzVBWwg3mFlRyKPs/edit?gid=172957346#gid=172957346"
+
+gs <- as_sheets_id(url)
+
+fb <- googlesheets4::range_read(ss = gs, sheet = "fb")
+
+str(fb)
+
+```
+## Correlación
+```{r}
+# Selecciona solo las columnas numéricas para evitar errores
+numeric_data <- fb[, sapply(fb, is.numeric)]
+cor_matrix <- cor(numeric_data)
+
+# Ver la matriz de correlación
+print(cor_matrix)
+
+
+```
+## Visualización de la matriz de correlación
+
+```{r}
+fb %>% 
+  select_if(is.numeric) %>% 
+  dplyr::select(!c("block")) %>% 
+  pairs.panels(x = .
+               , hist.col = "red"
+               , pch = 21
+               , stars = TRUE
+               , scale = TRUE
+               ,lm = TRUE
+               )
+```
+
+## Análisis de Componentes Principales (PCA)
+```{r}
+# Cargar librerías necesarias
+library(dplyr)
+library(FactoMineR)
+
+mv <- fb %>% 
+  group_by(riego, geno) %>% 
+  summarise(across(where(is.numeric), ~ mean(., na.rm = TRUE))) %>% 
+  PCA(scale.unit = T, quali.sup = c(1:4), graph = F)
+
+p1 <- plot (mv
+     , choix="ind"
+     , habillage=1)
+p2 <- plot (mv
+     , choix="var")
+list(p1, p2) %>% 
+  plot_grid(plotlist = ., nrow = 1)
+
+```
