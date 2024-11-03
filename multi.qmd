@@ -2,7 +2,7 @@
 title: " Analisis multivariado"
 ---
 
-# Importación de datos
+## Importación de datos
 ```{r}
 source('https://inkaverse.com/setup.r')
 
