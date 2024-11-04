@@ -8,9 +8,11 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - intro.qmd
       - Biomass.qmd
       - Tuber.qmd
       - multi.qmd
+      - conclu.qmd
     tools:
       - icon: twitter
         href: https://twitter.com/
