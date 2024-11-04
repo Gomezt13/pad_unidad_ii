@@ -63,9 +63,13 @@ p1 <- plot (mv
      , habillage=1)
 p2 <- plot (mv
      , choix="var")
-list(p1, p2) %>% 
-  plot_grid(plotlist = ., nrow = 1)
+p1
+
 
 ```
+```{r}
+p2
+```
+
 Ambas graficas 	tiene como ejes principales (Dim 1 y Dim 2): Donde Dim 1 (43.24%) y Dim 2 (31.47%) van a representar el 74.71% de la varianza total en los datos. Los puntos representan los genotipos evaluados, con colores diferentes según el tratamiento de riego (negro para irrigado y rojo para sequía). Y en donde claramente el "G06", está más alejados del centro y se asocian de manera más fuerte a los comportamientos específicos bajo condiciones de sequía.
 En el gráfico de vectores podemos observar la dirección e intensidad del vector que indican su contribución. Podemos apreciar que variables como biomdw, tubdw y rwc_84 apuntan en la misma dirección, sugiriendo que están positivamente correlacionadas y contribuyen significativamente a Dim 1. Variables como spad_83 y wue tienen vectores perpendiculares a lfa y trans, lo que indica que estas variables están poco correlacionadas entre sí. 
